@@ -1,0 +1,10 @@
+<taglib>
+    <tlib-version>1.0</tlib-version>
+    <jsp-version>2.3.1</jsp-version>
+    <short-name>My Custom Tag: MyMsg</short-name>
+    <tag>
+        <name>MyMsg</name>
+        <tag-class>com.epam.cdp.maskim.katuranau.module10.task2.tag.CustomJsonTag</tag-class>
+        <body-content>scriptless</body-content>
+    </tag>
+</taglib>

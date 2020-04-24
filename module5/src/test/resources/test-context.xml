@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource=" test-model-beans.xml"/>
+
+    <bean id="randomNumberExpressionParser" class="com.epam.cdp.maksim.katuranau.module5.spel.CustomSpelExpressionParser"/>
+
+    <bean id="jsrValidator" class="com.epam.cdp.maksim.katuranau.module5.validator.JSRValidator"/>
+
+    <bean id="employeeService" class="com.epam.cdp.maksim.katuranau.module5.service.impl.EmployeeServiceImpl">
+        <constructor-arg ref="jsrValidator"/>
+        <property name="employeeForPosition">
+            <map>
+                <entry key-ref="positionDeveloper">
+                    <list>
+                        <ref bean="employeePetya"/>
+                        <ref bean="employeeAndrei"/>
+                    </list>
+                </entry>
+                <entry key-ref="positionManager">
+                    <list>
+                        <ref bean="employeeSasha"/>
+                    </list>
+                </entry>
+                <entry key-ref="positionHR">
+                    <list>
+                        <ref bean="employeeKatya"/>
+                    </list>
+                </entry>
+            </map>
+        </property>
+    </bean>
+
+
+    <bean id="salaryService" class="com.epam.cdp.maksim.katuranau.module5.service.impl.SalaryServiceImpl">
+        <constructor-arg ref="jsrValidator"/>
+        <constructor-arg index="1" value="#{randomNumberExpressionParser.parseExpression('1.2:2.6')
+                                                                        .getValue('java.math.BigDecimal.class')}"/>
+        <property name="salaryOnPosition">
+            <map>
+                <entry key-ref="positionDeveloper" value-ref="developerSalary"/>
+                <entry key-ref="positionManager" value-ref="managerSalary"/>
+                <entry key-ref="positionHR" value-ref="hrSalary"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="positionService" class="com.epam.cdp.maksim.katuranau.module5.service.impl.PositionServiceImpl">
+        <constructor-arg ref="employeeService"/>
+        <constructor-arg ref="salaryService"/>
+        <constructor-arg ref="jsrValidator"/>
+        <property name="positionList">
+            <list>
+                <ref bean="positionDeveloper"/>
+                <ref bean="positionManager"/>
+                <ref bean="positionHR"/>
+            </list>
+        </property>
+    </bean>
+</beans>

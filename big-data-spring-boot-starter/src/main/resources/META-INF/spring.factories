@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.epam.cdp.maksim.katuranau.starter.configuration.StarterConfiguration

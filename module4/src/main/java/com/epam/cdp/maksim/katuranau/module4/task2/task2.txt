@@ -1,0 +1,5 @@
+TASK_2:
+1) -XX:NewRatio=1 -XX:SurvivorRatio=3
+2) -Xmx512m -XX:NewRatio=1 -XX:SurvivorRatio=2
+3) -Xmx512m -Xmn384m -XX:SurvivorRatio=3
+4) -Xmx768m -Xmn640m -XX:SurvivorRatio=3

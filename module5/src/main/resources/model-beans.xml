@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="employeePetya" class="com.epam.cdp.maksim.katuranau.module5.model.Employee">
+        <constructor-arg value="Petya"/>
+        <constructor-arg value="23"/>
+    </bean>
+    <bean id="employeeSasha" class="com.epam.cdp.maksim.katuranau.module5.model.Employee">
+        <constructor-arg value="Sasha"/>
+        <constructor-arg value="24"/>
+    </bean>
+    <bean id="employeeAndrei" class="com.epam.cdp.maksim.katuranau.module5.model.Employee">
+        <constructor-arg value="Andrei"/>
+        <constructor-arg value="22"/>
+    </bean>
+    <bean id="employeeKatya" class="com.epam.cdp.maksim.katuranau.module5.model.Employee">
+        <constructor-arg value="Katya"/>
+        <constructor-arg value="21"/>
+    </bean>
+    <bean id="employeeKira" class="com.epam.cdp.maksim.katuranau.module5.model.Employee">
+        <constructor-arg value="Kira"/>
+        <constructor-arg value="22"/>
+    </bean>
+    <bean id="employeeAlex" class="com.epam.cdp.maksim.katuranau.module5.model.Employee">
+        <constructor-arg value="Alex"/>
+        <constructor-arg value="23"/>
+    </bean>
+
+
+    <bean id="positionDeveloper" class="com.epam.cdp.maksim.katuranau.module5.model.Position">
+        <constructor-arg value="developer"/>
+        <property name="numberOfEmployees" value="2"/>
+    </bean>
+    <bean id="positionManager" class="com.epam.cdp.maksim.katuranau.module5.model.Position">
+        <constructor-arg value="manager"/>
+        <property name="numberOfEmployees" value="1"/>
+    </bean>
+    <bean id="positionHR" class="com.epam.cdp.maksim.katuranau.module5.model.Position">
+        <constructor-arg value="HR"/>
+        <property name="numberOfEmployees" value="1"/>
+    </bean>
+
+
+    <bean id="developerSalary" class="com.epam.cdp.maksim.katuranau.module5.model.Salary">
+        <constructor-arg value="1200"/>
+    </bean>
+    <bean id="managerSalary" class="com.epam.cdp.maksim.katuranau.module5.model.Salary">
+        <constructor-arg value="1500"/>
+    </bean>
+    <bean id="hrSalary" class="com.epam.cdp.maksim.katuranau.module5.model.Salary">
+        <constructor-arg value="1100"/>
+    </bean>
+</beans>

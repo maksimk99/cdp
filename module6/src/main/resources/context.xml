@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath:application.properties"/>
+
+    <bean id="beanA" class="com.epam.cdp.maksim.katuranau.module6.task1.bean.BeanA">
+        <property name="name" value="${beanA.name}"/>
+        <property name="size" value="${beanA.size}"/>
+    </bean>
+
+    <bean id="beanB" class="com.epam.cdp.maksim.katuranau.module6.task1.bean.BeanB">
+        <constructor-arg name="name" value="beanB_name"/>
+        <constructor-arg name="beanA" ref="beanA"/>
+    </bean>
+
+    <bean id="beanD" class="com.epam.cdp.maksim.katuranau.module6.task1.bean.BeanD" scope="prototype">
+        <constructor-arg name="name" value="beanD_name"/>
+        <constructor-arg name="number" value="#{(T(java.lang.Math).random() * 10000).intValue()}"/>
+    </bean>
+
+    <bean id="beanC" class="com.epam.cdp.maksim.katuranau.module6.task1.bean.BeanC">
+        <property name="name" value="beanC_name"/>
+        <property name="size" value="222"/>
+        <lookup-method name="createBeanD" bean="beanD"/>
+    </bean>
+
+    <bean id="informationReplacer" class="com.epam.cdp.maksim.katuranau.module6.task1.bean.InformationReplacer"/>
+
+    <bean id="beanE" class="com.epam.cdp.maksim.katuranau.module6.task1.bean.BeanE">
+        <replaced-method name="getInformation" replacer="informationReplacer"/>
+    </bean>
+
+    <bean id="customBPP" class="com.epam.cdp.maksim.katuranau.module6.task1.bean.CustomBeanPostProcessor"/>
+
+    <bean id="beanF" class="com.epam.cdp.maksim.katuranau.module6.task1.bean.BeanF"
+          lazy-init="true" init-method="initializeMe" destroy-method="destroyMe">
+        <constructor-arg name="name" value="beanF_name"/>
+        <property name="size" value="123"/>
+    </bean>
+</beans>

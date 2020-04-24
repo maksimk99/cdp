@@ -1,0 +1,34 @@
+{
+  "carSaleId": 1,
+  "price": 23200,
+  "date": 1564151591106,
+  "user": {
+    "userId": 1,
+    "userName": null,
+    "phoneNumber": null,
+    "login": null,
+    "password": null
+  },
+  "car": {
+    "carId": 3,
+    "year": null,
+    "mileage": 0,
+    "fuelType": {
+      "fuelTypeId": 1,
+      "fuelType": "Bensin"
+    },
+    "transmission": {
+      "transmissionId": 1,
+      "transmission": "Automatic"
+    },
+    "carModel": {
+      "carModelId": 2,
+      "carMake": {
+        "carMakeId": 2,
+        "carMake": "BMW"
+      },
+      "carModel": "M5"
+    },
+    "carFeatureList": null
+  }
+}

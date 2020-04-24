@@ -1,0 +1,21 @@
+#CAR_MAKE
+DROP PROCEDURE IF EXISTS get_car_make_list;
+DROP PROCEDURE IF EXISTS get_car_make;
+DROP PROCEDURE IF EXISTS create_car_make;
+DROP PROCEDURE IF EXISTS update_car_make;
+DROP PROCEDURE IF EXISTS delete_car_make;
+
+#CAR_MODEL
+DROP PROCEDURE IF EXISTS get_car_model_list;
+DROP PROCEDURE IF EXISTS get_car_models_of_car_make_list;
+DROP PROCEDURE IF EXISTS get_car_model;
+DROP PROCEDURE IF EXISTS create_car_model;
+DROP PROCEDURE IF EXISTS update_car_model;
+DROP PROCEDURE IF EXISTS delete_car_model;
+
+#CAR
+DROP PROCEDURE IF EXISTS get_car_list;
+DROP PROCEDURE IF EXISTS get_car;
+DROP PROCEDURE IF EXISTS create_car;
+DROP PROCEDURE IF EXISTS update_car;
+DROP PROCEDURE IF EXISTS delete_car;
