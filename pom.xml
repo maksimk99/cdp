@@ -42,7 +42,7 @@
     <maven.install.plugin>2.5.2</maven.install.plugin>
     <maven.site.plugin>3.7.1</maven.site.plugin>
     <maven.project.info.reports.plugin>3.0.0</maven.project.info.reports.plugin>
-    <junit.version>4.12</junit.version>
+    <junit.version>4.13.1</junit.version>
     <mockito.junit.version>2.28.2</mockito.junit.version>
     <spring.version>4.3.25.RELEASE</spring.version>
     <log4j2.version>2.11.1</log4j2.version>
