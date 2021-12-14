@@ -45,7 +45,7 @@
     <junit.version>4.12</junit.version>
     <mockito.junit.version>2.28.2</mockito.junit.version>
     <spring.version>4.3.25.RELEASE</spring.version>
-    <log4j2.version>2.11.1</log4j2.version>
+    <log4j2.version>2.16.0</log4j2.version>
     <slf4j.nop.version>1.7.26</slf4j.nop.version>
     <mysql.connector.java.version>8.0.18</mysql.connector.java.version>
     <hibernate.validator.version>6.0.16.Final</hibernate.validator.version>
